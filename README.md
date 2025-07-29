@@ -1,6 +1,6 @@
-# myapp
+# Fintek POS
 
-A new Flutter project.
+Create Flutter project.
 
 ## Getting Started
 
