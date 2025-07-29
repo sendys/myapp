@@ -1,5 +1,3 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:myapp/secure_storage_service.dart';
 
 class ApiService {
@@ -17,10 +15,11 @@ class ApiService {
 
   Future<Map<String, dynamic>> login(String email, String password) async {
     await Future.delayed(const Duration(seconds: 1)); // Simulasi
-    if (email == 'test@example.com' && password == 'password') {
+    if (email == 'test@fintek.com' && password == 'password') {
       // Di dunia nyata, token ini berasal dari respons server
-      final String fakeToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
-      
+      final String fakeToken =
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+
       // Simpan token
       await _storageService.saveToken(fakeToken);
 
@@ -29,7 +28,7 @@ class ApiService {
       throw Exception('Invalid credentials');
     }
   }
-  
+
   // Fungsi untuk logout
   Future<void> logout() async {
     // Hapus token dari penyimpanan

@@ -3,7 +3,7 @@ import 'package:myapp/api_service.dart';
 import 'package:myapp/secure_storage_service.dart';
 
 // Enum untuk merepresentasikan status otentikasi
-enum AuthStatus { authenticated, unauthenticated, loading, error }
+enum AuthStatus { authenticated, unauthenticated, loading, error, authenticating }
 
 // Provider untuk SecureStorageService
 final secureStorageProvider = Provider<SecureStorageService>((ref) => SecureStorageService());
@@ -27,7 +27,7 @@ class AuthStateNotifier extends StateNotifier<AuthStatus> {
   }
 
   Future<void> login(String email, String password) async {
-    state = AuthStatus.loading;
+    state = AuthStatus.authenticating;
     try {
       await _apiService.login(email, password);
       state = AuthStatus.authenticated;

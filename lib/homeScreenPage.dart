@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:myapp/auth_provider.dart';
-import 'package:myapp/api_service.dart';
 
 // Provider baru untuk mengambil data profil pengguna
 final userProfileProvider = FutureProvider<Map<String, dynamic>>((ref) {
