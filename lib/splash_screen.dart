@@ -124,7 +124,7 @@ class _SplashContentState extends State<SplashContent> {
       children: <Widget>[
         const Spacer(),
         const Text(
-          "TOKOTO",
+          "FINTEK POS",
           style: TextStyle(
             fontSize: 32,
             color: Color(0xFFFF7643),
