@@ -21,16 +21,10 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   }
 
   final pages = [
-    const HomeScreenPage(title: "Home"),
-    const Center(
-      child: Text("Fav"),
-    ),
-    const Center(
-      child: Text("Cart"),
-    ),
-    const Center(
-      child: Text("Profile"),
-    ),
+    const HomeScreen(),
+    const Center(child: Text("Fav")),
+    const Center(child: Text("Cart")),
+    const Center(child: Text("Profile")),
   ];
 
   @override
